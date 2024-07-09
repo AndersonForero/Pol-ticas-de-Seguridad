@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: "Oswald", sans-serif;
+    color: white;
+}
+
+body {
+    margin: 0;
+    background-color: rgb(27, 27, 27);
+}
+
+li {
+    list-style: none;
+}
+
+p {
+    font-size: 18px;
+}
+
+/* -- header -- */
+
+header {
+    width: 100%;
+    padding: 0.3rem 1.5rem;
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(235, 3, 80);
+}
+
+header div {
+    display: flex;
+    align-items: center;
+}
+
+header div img {
+    width: 4.5rem;
+    margin-right: 0.5rem;
+}
+
+header div h1 {
+    font-size: 1.8rem;
+}
+
+.navbar img, .navbar > ul > li {
+    width: 2.2rem;
+}
+
+.navbar img:hover {
+    opacity: 85%;
+    cursor: pointer;
+}
+
+.menu-desplegable {
+    width: 95%;
+    padding: 0;
+    position: absolute;
+    right: 1.5rem;
+    border-radius: 0.5rem;
+    background: linear-gradient(rgb(235, 3, 80) 50%, rgb(189, 0, 63));
+    box-shadow: 0 0 5px black;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.20s;
+}
+
+.menu-desplegable li {
+    margin: 0 0 1rem 2rem;
+}
+
+.menu-desplegable li:first-of-type {
+    margin-top: 1rem;
+}
+
+.menu-desplegable a {
+    text-decoration: none;
+}
+
+.menu-desplegable a:hover {
+    color: rgb(214, 214, 214);
+}
+
+.menu-desplegable a:active {
+    color: rgb(224, 175, 175);
+}
+
+.navbar > ul > li:hover .menu-desplegable {
+    max-height: 260px;
+    transition: max-height 0.20s;
+}
+
+/* -- main -- */
+
+main {
+    margin: 1rem 2rem 0 1rem;
+    padding-top: 4.5rem;
+    text-align: justify;
+}
+
+h2 {
+    margin-left: 1rem;
+}
+
+article {
+    margin-top: -4rem;
+    padding-top: 4rem;
+}
+
+/* -- footer -- */
+
+footer p {
+    float: right;
+    margin-right: 1rem;
+}
+
+@media (max-width: 400px) {
+    .menu-desplegable {
+        width: 80%;
+    }
+
+    .menu-desplegable li {
+        margin-right: 1rem;
+    }
+
+    .navbar > ul > li:hover .menu-desplegable {
+        max-height: 500px;
+        transition: max-height 0.20s;
+    }
+
+    main {
+        margin-right: 1.5rem;
+        padding-top: 7rem;
+    }
+
+    article {
+        margin-top: -7rem;
+        padding-top: 7rem;
+    }
+
+    h2 {
+        margin-left: initial;
+        text-align: center;
+    }
+}
